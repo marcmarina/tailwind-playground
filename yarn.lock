@@ -2838,6 +2838,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tailwind-merge@npm:^2.5.5":
+  version: 2.5.5
+  resolution: "tailwind-merge@npm:2.5.5"
+  checksum: 10c0/32614dd2b4ddd4fab070d5ec569e6da00e2b34269b9ac2f2ff16733cef29a076c8e2210fbfc1904d7983a8fdb6b3e63d18ca117645f21b12ca7bcf8fe3507241
+  languageName: node
+  linkType: hard
+
 "tailwind-playground@workspace:.":
   version: 0.0.0-use.local
   resolution: "tailwind-playground@workspace:."
@@ -2855,6 +2862,7 @@ __metadata:
     postcss: "npm:^8.4.49"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    tailwind-merge: "npm:^2.5.5"
     tailwindcss: "npm:^3.4.15"
     typescript: "npm:~5.6.2"
     typescript-eslint: "npm:^8.11.0"
