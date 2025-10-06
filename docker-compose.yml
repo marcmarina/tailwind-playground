@@ -1,0 +1,22 @@
+name: tailwind-playground
+
+services:
+  app:
+    build: .
+    command: yarn preview --host
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.docker.network=traefik"
+      - "traefik.enable=true"
+      - "traefik.http.routers.tailwind-playground.rule=Host(`tailwind-playground.marcmarina.com`)"
+      - "traefik.http.routers.tailwind-playground.entrypoints=websecure"
+      - "traefik.http.routers.tailwind-playground.tls.certresolver=letsencrypt"
+      - "traefik.http.services.tailwind-playground.loadbalancer.server.port=4173"
+
+networks:
+  traefik:
+    external: true
